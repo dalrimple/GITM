@@ -1,3 +1,109 @@
+@font-face {
+    font-family: 'Asap';
+    src: url('../images/fonts/asap-regular-webfont.eot');
+    src: url('../images/fonts/asap-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../images/fonts/asap-regular-webfont.woff2') format('woff2'),
+         url('../images/fonts/asap-regular-webfont.woff') format('woff'),
+         url('../images/fonts/asap-regular-webfont.ttf') format('truetype'),
+         url('../images/fonts/asap-regular-webfont.svg#asapregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Asap';
+    src: url('../images/fonts/asap-bold-webfont.eot');
+    src: url('../images/fonts/asap-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../images/fonts/asap-bold-webfont.woff2') format('woff2'),
+         url('../images/fonts/asap-bold-webfont.woff') format('woff'),
+         url('../images/fonts/asap-bold-webfont.ttf') format('truetype'),
+         url('../images/fonts/asap-bold-webfont.svg#asapbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+// Mobile first
 body {
-	background-image: url(../images/bg.png);
+    background-color: gray;
+    font-family: 'Asap';
+    background-image: url(../images/bg.png);
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 0.455em;
+}
+h3 {
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+p {
+    margin-bottom: 1em;
+}
+
+.about {
+    padding: 20px;
+}
+
+header {
+    background-color: #000000;
+    color: #FFFFFF;
+    box-shadow: 0px -2px 40px 0px rgba(0, 0, 0, 0.7);
+    position: relative;
+    .logo {
+        width: 300px;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 20px;
+        margin-left: -150px;
+    }
+}
+
+.breakpoints {
+    position: absolute;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    .breakpoint {
+        color: white;
+        display: none;
+        &.portrait {
+            display: block;
+        }
+    }
+}
+
+// Larger than portrait iphone 6
+@media (min-width: 376px) {
+    .breakpoints .breakpoint {
+        &.portrait {
+            display: none;
+        }
+        &.landscape {
+            display: block;
+        }
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .breakpoints .breakpoint {
+        &.portrait, &.landscape {
+            display: none;
+        }
+        &.tablet {
+            display: block;
+        }
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .breakpoints .breakpoint {
+        &.portrait, &.landscape, &.tablet {
+            display: none;
+        }
+        &.desktop {
+            display: block;
+        }
+    }
 }
