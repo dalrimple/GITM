@@ -26,6 +26,7 @@ body {
     background-color: gray;
     font-family: 'Asap';
     background-image: url(../images/bg.png);
+    color: #333333;
 }
 
 h1 {
@@ -34,33 +35,54 @@ h1 {
 }
 h3 {
     font-weight: bold;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
 }
 p {
     margin-bottom: 1em;
 }
-
+a {
+    color: #333333;
+    text-decoration: none;
+    &:active {
+        outline: none;
+    }
+}
 .about {
     padding: 20px;
 }
 
-header {
-    background-color: #000000;
-    color: #FFFFFF;
-    box-shadow: 0px -2px 40px 0px rgba(0, 0, 0, 0.7);
-    position: relative;
-    .logo {
-        width: 300px;
+.adr {
+    span {
         display: block;
+        margin: 0.33em 0;
+    }
+}
+
+header {
+    background-color: #FFFFFF;
+    padding: 20px 0 20px 0;
+    .logo {
+        width: 87.5%;
+        max-width: 500px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.hero {
+    background-color: #000000;
+    position: relative;
+    margin-bottom: 1em;
+    // box-shadow: 0px -2px 40px 0px rgba(0, 0, 0, 0.7);
+    .tagline {
         position: absolute;
-        left: 50%;
-        top: 20px;
-        margin-left: -150px;
     }
 }
 
 .breakpoints {
+    display: none;
     position: absolute;
+    z-index: 999999;
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
     .breakpoint {
@@ -80,6 +102,19 @@ header {
         }
         &.landscape {
             display: block;
+        }
+    }
+}
+
+@media (min-width: 578px) {
+    .hero {
+        .feature {
+            max-width: 50%;
+        }
+        .tagline {
+            max-width: 50%;
+            position: absolute;
+            right: 0;
         }
     }
 }
