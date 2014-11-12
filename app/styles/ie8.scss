@@ -1,0 +1,24 @@
+//Using styles from the various breakpoints
+header {
+    .logo {
+        width: 500px;
+        height: 43px;
+    }
+}
+.restrictor {
+    width:922px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero {
+    .feature {
+        max-width: 50%;
+    }
+    .tagline {
+        max-width: 50%;
+        position: absolute;
+        right: 0;
+    }
+}
