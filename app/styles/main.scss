@@ -42,11 +42,19 @@ p {
 }
 a {
     color: #333333;
-    text-decoration: none;
+    // text-decoration: none;
     &:active {
         outline: none;
     }
 }
+.tel a, a.tel {
+    text-decoration: none;
+    cursor: default;
+}
+button:focus {
+    outline:none;
+}
+
 .about {
     padding: 20px;
 }
@@ -82,6 +90,32 @@ header {
     max-width: 887px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.join {
+    p.error {
+        color: #AA0000;
+        input {
+            border-color: #AA0000;
+        }
+    }
+    .hint {
+        font-size: 0.9em;
+        padding: 0.4em 0;
+    }
+    input {
+        width: 100%;
+    }
+    button.submit {
+        background-color: white;
+        border: 1px solid #999999;
+        border-radius: 4px;
+        box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
+        padding: 0.5em 1em;
+        font-family: 'Asap';
+        font-size: 0.9em;
+        width: auto;
+    }
 }
 
 .breakpoints {
@@ -120,6 +154,11 @@ header {
             max-width: 50%;
             position: absolute;
             right: 0;
+        }
+    }
+    .join {
+        input {
+            width: auto;
         }
     }
 }
